@@ -31,6 +31,7 @@ class _SplashScreenState extends State<SplashScreen>
     _animation = Tween<double>(begin: 100, end: logoSize)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
     @override
+    // ignore: unused_element
     void dispose() {
       _controller.dispose();
       super.dispose();
