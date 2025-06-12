@@ -7,6 +7,8 @@ import 'package:learner/pages/dash/dash.dart';
 import 'package:learner/pages/home/home.dart';
 import 'package:learner/splash_screen/splash_screen.dart';
 
+import 'pages/explore_books/explore_books.dart';
+
 void main() {
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -19,5 +21,6 @@ void main() {
         "/carousel": (context) => const Carousel(),
         "/dream_job": (context) => const DreamJob(),
         "/transition": (context) => const ConcentricTransition(),
+        "/explore": (context) => const ExploreBooks(),
       }));
 }

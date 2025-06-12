@@ -149,7 +149,9 @@ class _CarouselState extends State<Carousel> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       drawer: MyDrawer(),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,

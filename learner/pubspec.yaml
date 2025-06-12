@@ -73,7 +73,7 @@ flutter:
     - assets/images/girl_img/
     - assets/icons/
     - assets/logo/
-    - assets/
+    - assets/images/books/
     - assets/images/african/
 
   # An image asset can refer to one or more resolution-specific "variants", see

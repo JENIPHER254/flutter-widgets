@@ -10,7 +10,9 @@ class Dash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       drawer: MyDrawer(),
       body: SizedBox(
         width: double.infinity,
@@ -88,7 +90,9 @@ class Dash extends StatelessWidget {
                             ),
                           )),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/explore");
+                          },
                           child: Text(
                             "Explore Books",
                             style: GoogleFonts.robotoSlab(
