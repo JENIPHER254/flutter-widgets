@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -9,27 +9,108 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+          // Enhanced Drawer Header
+          DrawerHeader(
+            padding: EdgeInsets.zero,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              image: DecorationImage(
+                image: AssetImage('assets/images/african/06.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
-            child: Text('Drawer Header'),
+            child: Container(
+              color: Colors.black.withOpacity(0.5),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 16.0, bottom: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Welcome Learner',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Africans tales to spark your imagination',
+                          style: TextStyle(color: Colors.white70),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Menu Items with Icons
+          ListTile(
+            leading: Icon(Icons.dashboard),
+            title: Text('Dashboard'),
+            onTap: () {
+              Navigator.pushNamed(context, "/dash");
+            },
           ),
           ListTile(
-            title: const Text('Item 1'),
+            leading: Icon(Icons.new_releases),
+            title: Text('New Arrivals'),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Item 2'),
+            leading: Icon(Icons.explore),
+            title: Text('Explore Books'),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
+              Navigator.pop(context);
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.history),
+            title: Text('Latest Read'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.favorite),
+            title: Text('Favorite Books'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.info),
+            title: Text('About App'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.help_outline),
+            title: Text('Help'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text('Logout'),
+            onTap: () {
               Navigator.pop(context);
             },
           ),

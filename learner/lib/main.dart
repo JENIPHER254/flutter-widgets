@@ -10,17 +10,16 @@ import 'package:learner/splash_screen/splash_screen.dart';
 import 'pages/explore_books/explore_books.dart';
 
 void main() {
-  runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const SplashScreen(),
-        '/home': (context) => const Home(),
-        "/dash": (context) => const Dash(),
-        "/dash2": (context) => const LearnFlutter(),
-        "/carousel": (context) => const Carousel(),
-        "/dream_job": (context) => const DreamJob(),
-        "/transition": (context) => const ConcentricTransition(),
-        "/explore": (context) => const ExploreBooks(),
-      }));
+  runApp(
+    MaterialApp(debugShowCheckedModeBanner: false, initialRoute: '/', routes: {
+      '/': (context) => const SplashScreen(),
+      '/home': (context) => const Home(),
+      "/dash": (context) => const Dash(),
+      "/dash2": (context) => const LearnFlutter(),
+      "/carousel": (context) => const Carousel(),
+      "/dream_job": (context) => const DreamJob(),
+      "/transition": (context) => const ConcentricTransition(),
+      "/explore": (context) => ExploreBooks(),
+    }),
+  );
 }
